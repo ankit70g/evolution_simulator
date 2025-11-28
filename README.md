@@ -1,4 +1,5 @@
 # 🧬 Neural Network Evolution Simulator
+![Demo Image](https://github.com/ankit70g/evolution_simulator/blob/16b24c58421be496d150e7f4633cbef0ee13251c/public/hero.png)
 
 <div align="center">
 
@@ -50,18 +51,22 @@ Watch as randomly initialized creatures gradually evolve the ability to:
 
 ### Generation 1 vs Generation 50+
 
-**Early Generations:**
+**Force Production:**
+![Demo Image](https://github.com/ankit70g/evolution_simulator/blob/16b24c58421be496d150e7f4633cbef0ee13251c/public/force_production.png)
 - Random, chaotic movement
 - Creatures die quickly
 - No apparent strategy
 
-**After Evolution:**
-- Efficient food-seeking behavior
-- Active poison avoidance
-- Optimized energy consumption
-- Emergent hunting patterns
+**Vision System:**
+![Demo Image](https://github.com/ankit70g/evolution_simulator/blob/16b24c58421be496d150e7f4633cbef0ee13251c/public/vision.png)
+- Real-time visualization (press 'V' to display vision circles)
+- 100-pixel perception radius around each creature
+- Nearest-neighbor detection for food and poison
+- Normalized directional inputs (X/Y coordinates relative to creature)
+- Multi-sensory integration (vision + velocity + energy state)
 
 ### Neural Network Visualization
+![Demo Image](https://github.com/ankit70g/evolution_simulator/blob/16b24c58421be496d150e7f4633cbef0ee13251c/public/neural_network.png)
 Click on any creature to see:
 - **Input neurons** (blue): Sensory information
 - **Hidden layer** (yellow): Processing layer
