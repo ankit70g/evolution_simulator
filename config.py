@@ -1,7 +1,7 @@
 # config.py
 # World settings
-SCREEN_WIDTH = 1200
-SCREEN_HEIGHT = 800
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 600
 FPS = 60
 
 # Creature settings
@@ -20,7 +20,8 @@ FOOD_ENERGY = 30
 POISON_DAMAGE = -50
 
 # Neural network settings
-INPUT_NEURONS = 8  # Distance to nearest food/poison (x4), own velocity (x2), energy, bias
+# Distance to nearest food/poison (x4), own velocity (x2), energy, bias
+INPUT_NEURONS = 8
 HIDDEN_NEURONS = 8
 OUTPUT_NEURONS = 2  # Steering force (x, y)
 

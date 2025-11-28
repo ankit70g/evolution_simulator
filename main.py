@@ -88,8 +88,14 @@ def main():
     clock = pygame.time.Clock()
 
     world = World()
-    font = pygame.font.Font(None, 24)
-    small_font = pygame.font.Font(None, 18)
+
+    try:
+        font = pygame.font.SysFont('Arial', 22, bold=True)
+        small_font = pygame.font.SysFont('Arial', 16)
+    except:
+        # Fallback if Arial not available
+        font = pygame.font.Font(None, 28)
+        small_font = pygame.font.Font(None, 22)
 
     paused = False
     show_vision = False
@@ -144,6 +150,16 @@ def main():
         # Draw stats
         stats = world.get_stats()
         y_offset = 10
+
+        # Add semi-transparent background for readability
+        panel_width = 180
+        panel_height = 240
+        stats_surface = pygame.Surface((panel_width, panel_height))
+        # Semi-transparent (0=invisible, 255=solid)
+        stats_surface.set_alpha(200)
+        stats_surface.fill((20, 20, 30))  # Dark background
+        screen.blit(stats_surface, (5, 5))
+
         texts = [
             f"Generation: {stats['generation']}",
             f"Population: {stats['population']}",

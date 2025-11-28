@@ -3,6 +3,7 @@ import pygame
 import random
 from config import *
 
+
 class Food:
     def __init__(self, x=None, y=None):
         self.x = x if x is not None else random.randint(0, SCREEN_WIDTH)
